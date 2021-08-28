@@ -236,14 +236,14 @@ paths:
 components:
   schemas:
     FilterRequest:
-        type: object
-        properties:
-          filter:
-            $ref: '#/components/schemas/filter'
-          range:
-            $ref: '#/components/schemas/range'
-          orderby:
-            $ref: '#/components/schemas/orderby'
+      type: object
+      properties:
+        filter:
+          $ref: '#/components/schemas/filter'
+        range:
+          $ref: '#/components/schemas/range'
+        orderby:
+          $ref: '#/components/schemas/orderby'
 
     filter:
       type: object
