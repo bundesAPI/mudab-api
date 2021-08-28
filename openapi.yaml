@@ -44,6 +44,78 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/ProjectStation'
+  /STATION_SMALL:
+    post:
+      operationId: list-mess-stationen
+      summary: Liste aller Messstationen
+      description: |
+        Gibt eine filterbare Liste aller Messtationen in der Datenbank zurück.
+        Filterbare Attribute sind die Felder die aus dem Messstation Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    or:
+                      $ref: '#/components/schemas/filter'
+                    and:
+                      $ref: '#/components/schemas/filter'
+                range:
+                  $ref: '#/components/schemas/range'
+                orderby:
+                  $ref: '#/components/schemas/orderby'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  STATION_SMALL:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Messstation'
+  /MV_PARAMETER:
+    post:
+      operationId: list-parameter
+      summary: Liste aller Parameter
+      description: |
+        Gibt eine filterbare Liste aller Parameter in der Datenbank zurück.
+        Filterbare Attribute sind die Felder die aus dem Parameter Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    or:
+                      $ref: '#/components/schemas/filter'
+                    and:
+                      $ref: '#/components/schemas/filter'
+                range:
+                  $ref: '#/components/schemas/range'
+                orderby:
+                  $ref: '#/components/schemas/orderby'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  STATION_SMALL:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Parameter'
 components:
   schemas:
     filter:
@@ -100,3 +172,42 @@ components:
         INSTITUT:
           type: string
           description: Institut zu dem die Projektstation gehört
+    Messstation:
+      type: object
+      properties:
+        metadataid:
+          type: integer
+        STATNAME_ST:
+          type: string
+          description: Messstationsname
+        NAME_PS:
+          type: string
+          description: Name der Projektstation
+        STATIONTYPE_ST:
+          type: string
+          description: Typ der Station
+        COMPT_DS:
+          type: string
+    Parameter:
+      type: object
+      description: Messparameter
+      properties:
+        metadataid:
+          type: integer
+        COMPT_DS:
+          type: string
+        PARAMETER:
+          type: string
+          description: Parameterabkürzung
+        PARAMETERGRUPPE:
+          type: string
+          description: Gruppe des Parameters
+        PARAM_NAME:
+          type: string
+          description: Name des Parameters
+        PARGROUP:
+          type: string
+          description: Gruppe des Parameters
+        PARAMGROUP_NAME:
+          type: string
+          description: Name der Parametergruppe
