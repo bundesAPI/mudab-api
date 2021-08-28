@@ -1,0 +1,102 @@
+openapi: 3.0.0
+info:
+  title: 'Umweltbundesamt: Meeresumweltdatenbank (MUDAB)'
+  description: |
+    Meeres-Monitoringdaten von Küstenbundesländern und Forschungseinrichtungen
+  version: 1.0.0
+servers:
+  - url: 'https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements'
+paths:
+  
+  /PROJECTSTATION_SMALL:
+    post:
+      operationId: list-projekt-stationen
+      summary: Liste aller Projekt Stationen
+      description: |
+        Gibt eine filterbare Liste aller Projektstation in der Datenbank zurück.
+        Filterbare Attribute sind die Felder die aus dem ProjectStation Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    or:
+                      $ref: '#/components/schemas/filter'
+                    and:
+                      $ref: '#/components/schemas/filter'
+                range:
+                  $ref: '#/components/schemas/range'
+                orderby:
+                  $ref: '#/components/schemas/orderby'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  V_MUDAB_PROJECTSTATION:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ProjectStation'
+components:
+  schemas:
+    filter:
+      type: object
+      properties:
+        col:
+          type: string
+          description: Spaltenname
+          example: NAME_PS
+        op:
+          type: string
+          description: Vergleichsoperation (SQL ish)
+          example: like
+        value:
+          type: string
+          description: Vergleichswert
+          example: TUVA010
+    range:
+      type: object
+      properties:
+        from:
+          type: integer
+          description: Start der Range
+        count:
+          type: integer
+          description: Wie viele Einträge von "from" aufwärts ausgegeben werden sollen.
+    orderby:
+      type: object
+      properties:
+        col:
+          type: string
+          description: Spaltenname für die Sortierung
+        dir:
+          type: string
+          enum:
+            - asc
+            - desc
+          description: Richtung der Sortierung, entweder aufsteigend (asc) order fallend (desc)
+
+    ProjectStation:
+      type: object
+      properties:
+        metadataid:
+          type: integer
+        PROJECTSTATIONID:
+          type: integer
+          description: Aufsteigende IDs von Projektstationen
+        NAME_PS:
+          type: string
+          description: Name der Projektstation
+        REGION:
+          type: string
+          description: Region der Projektstation
+        INSTITUT:
+          type: string
+          description: Institut zu dem die Projektstation gehört
