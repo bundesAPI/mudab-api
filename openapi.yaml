@@ -349,15 +349,12 @@ components:
         col:
           type: string
           description: Spaltenname
-          example: NAME_PS
         op:
           type: string
           description: Vergleichsoperation (SQL ish)
-          example: like
         value:
           type: string
           description: Vergleichswert
-          example: TUVA010
     range:
       type: object
       properties:
