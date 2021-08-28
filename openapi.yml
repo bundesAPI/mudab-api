@@ -19,19 +19,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                filter:
-                  type: object
-                  properties:
-                    or:
-                      $ref: '#/components/schemas/filter'
-                    and:
-                      $ref: '#/components/schemas/filter'
-                range:
-                  $ref: '#/components/schemas/range'
-                orderby:
-                  $ref: '#/components/schemas/orderby'
+              $ref: '#/components/schemas/FilterRequest'
       responses:
         200:
           description: Success
@@ -56,19 +44,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                filter:
-                  type: object
-                  properties:
-                    or:
-                      $ref: '#/components/schemas/filter'
-                    and:
-                      $ref: '#/components/schemas/filter'
-                range:
-                  $ref: '#/components/schemas/range'
-                orderby:
-                  $ref: '#/components/schemas/orderby'
+              $ref: '#/components/schemas/FilterRequest'
       responses:
         200:
           description: Success
@@ -93,19 +69,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                filter:
-                  type: object
-                  properties:
-                    or:
-                      $ref: '#/components/schemas/filter'
-                    and:
-                      $ref: '#/components/schemas/filter'
-                range:
-                  $ref: '#/components/schemas/range'
-                orderby:
-                  $ref: '#/components/schemas/orderby'
+              $ref: '#/components/schemas/FilterRequest'
       responses:
         200:
           description: Success
@@ -130,19 +94,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                filter:
-                  type: object
-                  properties:
-                    or:
-                      $ref: '#/components/schemas/filter'
-                    and:
-                      $ref: '#/components/schemas/filter'
-                range:
-                  $ref: '#/components/schemas/range'
-                orderby:
-                  $ref: '#/components/schemas/orderby'
+              $ref: '#/components/schemas/FilterRequest'
       responses:
         200:
           description: Success
@@ -167,19 +119,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                filter:
-                  type: object
-                  properties:
-                    or:
-                      $ref: '#/components/schemas/filter'
-                    and:
-                      $ref: '#/components/schemas/filter'
-                range:
-                  $ref: '#/components/schemas/range'
-                orderby:
-                  $ref: '#/components/schemas/orderby'
+              $ref: '#/components/schemas/FilterRequest'
       responses:
         200:
           description: Success
@@ -204,19 +144,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                filter:
-                  type: object
-                  properties:
-                    or:
-                      $ref: '#/components/schemas/filter'
-                    and:
-                      $ref: '#/components/schemas/filter'
-                range:
-                  $ref: '#/components/schemas/range'
-                orderby:
-                  $ref: '#/components/schemas/orderby'
+              $ref: '#/components/schemas/FilterRequest'
       responses:
         200:
           description: Success
@@ -241,19 +169,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                filter:
-                  type: object
-                  properties:
-                    or:
-                      $ref: '#/components/schemas/filter'
-                    and:
-                      $ref: '#/components/schemas/filter'
-                range:
-                  $ref: '#/components/schemas/range'
-                orderby:
-                  $ref: '#/components/schemas/orderby'
+              $ref: '#/components/schemas/FilterRequest'
       responses:
         200:
           description: Success
@@ -278,19 +194,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                filter:
-                  type: object
-                  properties:
-                    or:
-                      $ref: '#/components/schemas/filter'
-                    and:
-                      $ref: '#/components/schemas/filter'
-                range:
-                  $ref: '#/components/schemas/range'
-                orderby:
-                  $ref: '#/components/schemas/orderby'
+              $ref: '#/components/schemas/FilterRequest'
       responses:
         200:
           description: Success
@@ -315,19 +219,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                filter:
-                  type: object
-                  properties:
-                    or:
-                      $ref: '#/components/schemas/filter'
-                    and:
-                      $ref: '#/components/schemas/filter'
-                range:
-                  $ref: '#/components/schemas/range'
-                orderby:
-                  $ref: '#/components/schemas/orderby'
+              $ref: '#/components/schemas/FilterRequest'
       responses:
         200:
           description: Success
@@ -343,7 +235,24 @@ paths:
 
 components:
   schemas:
+    FilterRequest:
+        type: object
+        properties:
+          filter:
+            $ref: '#/components/schemas/filter'
+          range:
+            $ref: '#/components/schemas/range'
+          orderby:
+            $ref: '#/components/schemas/orderby'
+
     filter:
+      type: object
+      properties:
+        or:
+          $ref: '#/components/schemas/filterAction'
+        and:
+          $ref: '#/components/schemas/filterAction'
+    filterAction:
       type: object
       properties:
         col:
