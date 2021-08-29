@@ -1,0 +1,401 @@
+openapi: 3.0.0
+info:
+  title: 'Umweltbundesamt: Meeresumweltdatenbank (MUDAB)'
+  description: |
+    Meeres-Monitoringdaten von Küstenbundesländern und Forschungseinrichtungen
+  version: 1.0.0
+servers:
+  - url: 'https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements'
+paths:
+  
+  /PROJECTSTATION_SMALL:
+    post:
+      operationId: list-projekt-stationen
+      summary: Liste aller Projekt Stationen
+      description: |
+        Gibt eine filterbare Liste aller Projektstation in der Datenbank zurück.
+        Filterbare Attribute sind die Felder die aus dem ProjectStation Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FilterRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  V_MUDAB_PROJECTSTATION:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ProjectStation'
+
+  /STATION_SMALL:
+    post:
+      operationId: list-mess-stationen
+      summary: Liste aller Messstationen
+      description: |
+        Gibt eine filterbare Liste aller Messtationen in der Datenbank zurück.
+        Filterbare Attribute sind die Felder die aus dem Messstation Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FilterRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  STATION_SMALL:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Messstation'
+
+  /MV_PARAMETER:
+    post:
+      operationId: list-parameter
+      summary: Liste aller Parameter
+      description: |
+        Gibt eine filterbare Liste aller Parameter in der Datenbank zurück.
+        Filterbare Attribute sind die Felder die aus dem Parameter Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FilterRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  STATION_SMALL:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Parameter'
+
+  /MV_STATION_MSMNT:
+    post:
+      operationId: list-parameter-values
+      summary: Liste aller Messwerte
+      description: |
+        Gibt eine filterbare Liste aller Messwerte in der Datenbank zurück.
+        Filterbare Attribute sind die Felder die aus dem ParameterValue Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FilterRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  STATION_SMALL:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ParameterValue'
+
+  /MV_PARAMETER_BIOLOGIE:
+    post:
+      operationId: list-parameters-biologie
+      summary: Liste aller Parameter im Biologie Kompartiment
+      description: |
+        Gibt eine filterbare Liste aller Parameter in der Datenbank aus dem Kompartiment Biologie zurück.
+        Filterbare Attribute sind die Felder die aus dem Parameter Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FilterRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  MV_PARAMETER_BIOLOGIE:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Parameter'
+
+  /MV_PARAMETER_BIOTA:
+    post:
+      operationId: list-parameters-biota
+      summary: Liste aller Parameter im Biota Kompartiment
+      description: |
+        Gibt eine filterbare Liste aller Parameter in der Datenbank aus dem Kompartiment Biota zurück.
+        Filterbare Attribute sind die Felder die aus dem Parameter Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FilterRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  MV_PARAMETER_WASSER:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Parameter'
+
+  /MV_PARAMETER_WASSER:
+    post:
+      operationId: list-parameters-wasser
+      summary: Liste aller Parameter im Wasser Kompartiment
+      description: |
+        Gibt eine filterbare Liste aller Parameter in der Datenbank aus dem Kompartiment Wasser zurück.
+        Filterbare Attribute sind die Felder die aus dem Parameter Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FilterRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  MV_PARAMETER_WASSER:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Parameter'
+
+  /MV_PARAMETER_SEDIMENT:
+    post:
+      operationId: list-parameters-sediment
+      summary: Liste aller Parameter im Sediment Kompartiment
+      description: |
+        Gibt eine filterbare Liste aller Parameter in der Datenbank aus dem Kompartiment Sediment zurück.
+        Filterbare Attribute sind die Felder die aus dem Parameter Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FilterRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  MV_PARAMETER_SEDIMENT:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Parameter'
+
+  /V_PLC_STATION:
+    post:
+      operationId: list-plc-stations
+      summary: Liste aller HELCOM PLC Stationen
+      description: |
+        Gibt eine filterbare Liste aller HELCOM PLC Stationen in der Datenbank zurück.
+        Filterbare Attribute sind die Felder die aus dem HelcomPLCStation Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FilterRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  V_PLC_STATION:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/HelcomPLCStation'
+
+components:
+  schemas:
+    FilterRequest:
+      type: object
+      properties:
+        filter:
+          $ref: '#/components/schemas/filter'
+        range:
+          $ref: '#/components/schemas/range'
+        orderby:
+          $ref: '#/components/schemas/orderby'
+
+    filter:
+      type: object
+      properties:
+        or:
+          $ref: '#/components/schemas/filterAction'
+        and:
+          $ref: '#/components/schemas/filterAction'
+    filterAction:
+      type: object
+      properties:
+        col:
+          type: string
+          description: Spaltenname
+        op:
+          type: string
+          description: Vergleichsoperation (SQL ish)
+        value:
+          type: string
+          description: Vergleichswert
+    range:
+      type: object
+      properties:
+        from:
+          type: integer
+          description: Start der Range
+        count:
+          type: integer
+          description: Wie viele Einträge von "from" aufwärts ausgegeben werden sollen.
+    orderby:
+      type: object
+      properties:
+        col:
+          type: string
+          description: Spaltenname für die Sortierung
+        dir:
+          type: string
+          enum:
+            - asc
+            - desc
+          description: Richtung der Sortierung, entweder aufsteigend (asc) order fallend (desc)
+
+    ProjectStation:
+      type: object
+      properties:
+        metadataid:
+          type: integer
+        PROJECTSTATIONID:
+          type: integer
+          description: Aufsteigende IDs von Projektstationen
+        NAME_PS:
+          type: string
+          description: Name der Projektstation
+        REGION:
+          type: string
+          description: Region der Projektstation
+        INSTITUT:
+          type: string
+          description: Institut zu dem die Projektstation gehört
+    Messstation:
+      type: object
+      properties:
+        metadataid:
+          type: integer
+        STATNAME_ST:
+          type: string
+          description: Messstationsname
+        NAME_PS:
+          type: string
+          description: Name der Projektstation
+        STATIONTYPE_ST:
+          type: string
+          description: Typ der Station
+        COMPT_DS:
+          $ref: '#/components/schemas/Compartment'
+    Parameter:
+      type: object
+      description: Messparameter
+      properties:
+        metadataid:
+          type: integer
+        COMPT_DS:
+          $ref: '#/components/schemas/Compartment'
+        PARAMETER:
+          type: string
+          description: Parameterabkürzung
+        PARAMETERGRUPPE:
+          type: string
+          description: Gruppe des Parameters
+        PARAM_NAME:
+          type: string
+          description: Name des Parameters
+        PARGROUP:
+          type: string
+          description: Gruppe des Parameters
+        PARAMGROUP_NAME:
+          type: string
+          description: Name der Parametergruppe
+    ParameterValue:
+      type: object
+      description: Parameter Messwert
+      properties:
+        metadataid:
+          type: integer
+        STATNAME_ST:
+          type: string
+          description: Messstationsname
+        STATNAME_DATE_TIME:
+          type: string
+          description: Zusammengesetzt aus "<Messstation> <Messdatum> <Uhrzeit>"
+        PARAMETERID_PM:
+          type: string
+        PARAMCODE_PM:
+          type: string
+          description: Name des Parameters
+        DATE_STM:
+          type: string
+          description: Datum einzeln im Format YYYYMMDD
+        TIME_STM:
+          type: string
+          description: Uhrzeit im Format HHMM
+        VALUE_MS:
+          type: string
+          description: Messwert
+    HelcomPLCStation:
+      type: object
+      properties:
+        STATION_NAME:
+          type: string
+          description: Name der Station
+        STATION_CODE:
+          type: string
+          description: Stationscode
+        LAND_CD:
+          type: string
+        ST_LAT:
+          type: number
+          description: Latitude
+        ST_LON:
+          type: number
+          description: Longitude
+        SUBCM_CODE:
+          type: string
+        SUBCM_NAME:
+          type: string
+        MON_TYPE:
+          type: string
+
+    Compartment:
+      type: string
+      enum:
+        - BL
+        - CW
+        - CS
+        - CF
