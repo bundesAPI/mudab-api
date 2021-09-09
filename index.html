@@ -17,7 +17,7 @@
                 dom_id: "#openapi",
                requestInterceptor: function(req) {   
                     var mapping = {
-                        "geoportal.bafg.de: "mudab.api.proxy.bund.dev"
+                        "geoportal.bafg.de": "mudab.api.proxy.bund.dev"
                     }
                     if(this.url !== "openapi.yaml") {
                        var url = new URL(req.url);
