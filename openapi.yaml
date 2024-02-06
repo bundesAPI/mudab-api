@@ -7,7 +7,7 @@ info:
 servers:
   - url: 'https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements'
 paths:
-  
+
   /PROJECTSTATION_SMALL:
     post:
       operationId: list-projekt-stationen
@@ -233,6 +233,56 @@ paths:
                     items:
                       $ref: '#/components/schemas/HelcomPLCStation'
 
+  /V_GEMESSENE_PARA_PLC:
+    post:
+      operationId: list-parameters-plc
+      summary: Liste aller Parameter der PLC Stationen
+      description: |
+        Gibt eine filterbare Liste aller Parameter welche durch die gefilterten PLC Stationen gemessen werden zurück.
+        Filterbare Attribute sind die Felder die aus dem ParameterPLC Schema kommen.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FilterRequest'
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                    V_GEMESSENE_PARA_PLC:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ParameterPLC'
+
+  /V_MESSWERTE_PLC:
+      post:
+      operationId: list-messwerte-plc
+      summary: Liste aller Messwerte der gefilterten PLC Stationen
+      description: |
+        Gibt eine filterbare Liste aller Messwerte welche durch PLC Stationen gemessen wurden zurück.
+        Filterbare Attribute sind die Felder die aus dem MesswertPLC Schema kommen, z.B. STATION_CODE
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FilterRequest'
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                    V_MESSWERTE_PLC:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MesswertPLC'
+
 components:
   schemas:
     FilterRequest:
@@ -342,6 +392,92 @@ components:
         PARAMGROUP_NAME:
           type: string
           description: Name der Parametergruppe
+    ParameterPLC:
+      type: object
+      description: Messparameter einer PLC Station
+      properties:
+        metadataid:
+          type: integer
+          description: metadataid für diese Schema ist 66
+        PARAMETER:
+          type: string
+          description: Parameterabkürzung
+        PARAMETERGRUPPE:
+          type: string
+          description: Gruppe des Parameters
+        STATION_CODE:
+          type: string
+          description: Stationscode
+        LETZTE_MESSUNG:
+          type: string
+          description: Jahr der letzten Messung
+        PRKEY:
+          type: string
+          description: Eindeutiger Identifier des Messwerts, zusammengesetzt aus STATION_CODE und PARAMETER
+        STATION_NAME:
+          type: string
+          description: Name der Station
+        ANZ_MESSWERTE:
+          type: integer
+          description: Anzahl der Messwerte
+        SUBCM_CODE:
+          type: string
+        SUBCM_NAME:
+          type: string
+    MesswertPLC:
+      type: object
+      description: Ein Messwert einer PLC Station
+      properties:
+        metadataid:
+          type: integer
+          description: metadataid für diese Schema ist 67
+        NUMMER:
+          type: integer
+          description: Laufende Nummer des Datums
+        NAME:
+          type: integer
+          description: Bezeichnung des Messwertes
+        STATION_CODE:
+          type: string
+          description: Stationscode
+        STATION_NAME:
+          type: string
+          description: Name der Station
+        VALUE:
+          type: number
+          description: Wert
+        PARAM_TYPE:
+          type: string
+          description: Art der Messwertaggregation, entweder "TOT" oder "AVE"
+        PARAM_ID:
+          type: string
+          description: Zahlencode für "NAME"
+        PERIOD_NAME:
+          type: string
+          description: Jahr der Messung für PERIOD_TYPE "A"
+        PERIOD_TYPE:
+          type: string
+          description: Dauer der Aggregation, "A"
+        LAND_CD:
+          type: string
+          description: Code für das Bundesland der Station
+        ST_LAT:
+          type: number
+          description: Latitude
+        ST_LON:
+          type: number
+          description: Longitude
+        SUBCM_CODE:
+          type: string
+        SUBCM_NAME:
+          type: string
+        MON_TYPE:
+          type: string
+        VAL_UNIT:
+          type: string
+          description: Einheit des Messwertes
+        AREA:
+          type: number
     ParameterValue:
       type: object
       description: Parameter Messwert
@@ -379,6 +515,7 @@ components:
           description: Stationscode
         LAND_CD:
           type: string
+          description: Code für das Bundesland der Station
         ST_LAT:
           type: number
           description: Latitude
