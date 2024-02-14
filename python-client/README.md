@@ -52,15 +52,17 @@ from deutschland import mudab
 from pprint import pprint
 from deutschland.mudab.api import default_api
 from deutschland.mudab.model.filter_request import FilterRequest
-from deutschland.mudab.model.inline_response200 import InlineResponse200
-from deutschland.mudab.model.inline_response2001 import InlineResponse2001
-from deutschland.mudab.model.inline_response2002 import InlineResponse2002
-from deutschland.mudab.model.inline_response2003 import InlineResponse2003
-from deutschland.mudab.model.inline_response2004 import InlineResponse2004
-from deutschland.mudab.model.inline_response2005 import InlineResponse2005
-from deutschland.mudab.model.inline_response2006 import InlineResponse2006
-from deutschland.mudab.model.inline_response2007 import InlineResponse2007
-from deutschland.mudab.model.inline_response2008 import InlineResponse2008
+from deutschland.mudab.model.list_mess_stationen200_response import ListMessStationen200Response
+from deutschland.mudab.model.list_messwerte_plc200_response import ListMesswertePlc200Response
+from deutschland.mudab.model.list_parameter200_response import ListParameter200Response
+from deutschland.mudab.model.list_parameter_values200_response import ListParameterValues200Response
+from deutschland.mudab.model.list_parameters_biologie200_response import ListParametersBiologie200Response
+from deutschland.mudab.model.list_parameters_biota200_response import ListParametersBiota200Response
+from deutschland.mudab.model.list_parameters_plc200_response import ListParametersPlc200Response
+from deutschland.mudab.model.list_parameters_sediment200_response import ListParametersSediment200Response
+from deutschland.mudab.model.list_parameters_wasser200_response import ListParametersWasser200Response
+from deutschland.mudab.model.list_plc_stations200_response import ListPlcStations200Response
+from deutschland.mudab.model.list_projekt_stationen200_response import ListProjektStationen200Response
 # Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
@@ -111,10 +113,12 @@ All URIs are relative to *https://geoportal.bafg.de/MUDABAnwendung/rest/BaseCont
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**list_mess_stationen**](docs/DefaultApi.md#list_mess_stationen) | **POST** /STATION_SMALL | Liste aller Messstationen
+*DefaultApi* | [**list_messwerte_plc**](docs/DefaultApi.md#list_messwerte_plc) | **POST** /V_MESSWERTE_PLC | Liste aller Messwerte der gefilterten PLC Stationen
 *DefaultApi* | [**list_parameter**](docs/DefaultApi.md#list_parameter) | **POST** /MV_PARAMETER | Liste aller Parameter
 *DefaultApi* | [**list_parameter_values**](docs/DefaultApi.md#list_parameter_values) | **POST** /MV_STATION_MSMNT | Liste aller Messwerte
 *DefaultApi* | [**list_parameters_biologie**](docs/DefaultApi.md#list_parameters_biologie) | **POST** /MV_PARAMETER_BIOLOGIE | Liste aller Parameter im Biologie Kompartiment
 *DefaultApi* | [**list_parameters_biota**](docs/DefaultApi.md#list_parameters_biota) | **POST** /MV_PARAMETER_BIOTA | Liste aller Parameter im Biota Kompartiment
+*DefaultApi* | [**list_parameters_plc**](docs/DefaultApi.md#list_parameters_plc) | **POST** /V_GEMESSENE_PARA_PLC | Liste aller Parameter der PLC Stationen
 *DefaultApi* | [**list_parameters_sediment**](docs/DefaultApi.md#list_parameters_sediment) | **POST** /MV_PARAMETER_SEDIMENT | Liste aller Parameter im Sediment Kompartiment
 *DefaultApi* | [**list_parameters_wasser**](docs/DefaultApi.md#list_parameters_wasser) | **POST** /MV_PARAMETER_WASSER | Liste aller Parameter im Wasser Kompartiment
 *DefaultApi* | [**list_plc_stations**](docs/DefaultApi.md#list_plc_stations) | **POST** /V_PLC_STATION | Liste aller HELCOM PLC Stationen
@@ -128,18 +132,22 @@ Class | Method | HTTP request | Description
  - [FilterAction](docs/FilterAction.md)
  - [FilterRequest](docs/FilterRequest.md)
  - [HelcomPLCStation](docs/HelcomPLCStation.md)
- - [InlineResponse200](docs/InlineResponse200.md)
- - [InlineResponse2001](docs/InlineResponse2001.md)
- - [InlineResponse2002](docs/InlineResponse2002.md)
- - [InlineResponse2003](docs/InlineResponse2003.md)
- - [InlineResponse2004](docs/InlineResponse2004.md)
- - [InlineResponse2005](docs/InlineResponse2005.md)
- - [InlineResponse2006](docs/InlineResponse2006.md)
- - [InlineResponse2007](docs/InlineResponse2007.md)
- - [InlineResponse2008](docs/InlineResponse2008.md)
+ - [ListMessStationen200Response](docs/ListMessStationen200Response.md)
+ - [ListMesswertePlc200Response](docs/ListMesswertePlc200Response.md)
+ - [ListParameter200Response](docs/ListParameter200Response.md)
+ - [ListParameterValues200Response](docs/ListParameterValues200Response.md)
+ - [ListParametersBiologie200Response](docs/ListParametersBiologie200Response.md)
+ - [ListParametersBiota200Response](docs/ListParametersBiota200Response.md)
+ - [ListParametersPlc200Response](docs/ListParametersPlc200Response.md)
+ - [ListParametersSediment200Response](docs/ListParametersSediment200Response.md)
+ - [ListParametersWasser200Response](docs/ListParametersWasser200Response.md)
+ - [ListPlcStations200Response](docs/ListPlcStations200Response.md)
+ - [ListProjektStationen200Response](docs/ListProjektStationen200Response.md)
  - [Messstation](docs/Messstation.md)
+ - [MesswertPLC](docs/MesswertPLC.md)
  - [Orderby](docs/Orderby.md)
  - [Parameter](docs/Parameter.md)
+ - [ParameterPLC](docs/ParameterPLC.md)
  - [ParameterValue](docs/ParameterValue.md)
  - [ProjectStation](docs/ProjectStation.md)
  - [Range](docs/Range.md)
