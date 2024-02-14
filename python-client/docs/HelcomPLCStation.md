@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **station_name** | **str** | Name der Station | [optional] 
 **station_code** | **str** | Stationscode | [optional] 
-**land_cd** | **str** |  | [optional] 
+**land_cd** | **str** | Code für das Bundesland der Station | [optional] 
 **st_lat** | **float** | Latitude | [optional] 
 **st_lon** | **float** | Longitude | [optional] 
 **subcm_code** | **str** |  | [optional] 

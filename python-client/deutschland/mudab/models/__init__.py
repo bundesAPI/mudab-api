@@ -14,18 +14,42 @@ from deutschland.mudab.model.filter import Filter
 from deutschland.mudab.model.filter_action import FilterAction
 from deutschland.mudab.model.filter_request import FilterRequest
 from deutschland.mudab.model.helcom_plc_station import HelcomPLCStation
-from deutschland.mudab.model.inline_response200 import InlineResponse200
-from deutschland.mudab.model.inline_response2001 import InlineResponse2001
-from deutschland.mudab.model.inline_response2002 import InlineResponse2002
-from deutschland.mudab.model.inline_response2003 import InlineResponse2003
-from deutschland.mudab.model.inline_response2004 import InlineResponse2004
-from deutschland.mudab.model.inline_response2005 import InlineResponse2005
-from deutschland.mudab.model.inline_response2006 import InlineResponse2006
-from deutschland.mudab.model.inline_response2007 import InlineResponse2007
-from deutschland.mudab.model.inline_response2008 import InlineResponse2008
+from deutschland.mudab.model.list_mess_stationen200_response import (
+    ListMessStationen200Response,
+)
+from deutschland.mudab.model.list_messwerte_plc200_response import (
+    ListMesswertePlc200Response,
+)
+from deutschland.mudab.model.list_parameter200_response import ListParameter200Response
+from deutschland.mudab.model.list_parameter_values200_response import (
+    ListParameterValues200Response,
+)
+from deutschland.mudab.model.list_parameters_biologie200_response import (
+    ListParametersBiologie200Response,
+)
+from deutschland.mudab.model.list_parameters_biota200_response import (
+    ListParametersBiota200Response,
+)
+from deutschland.mudab.model.list_parameters_plc200_response import (
+    ListParametersPlc200Response,
+)
+from deutschland.mudab.model.list_parameters_sediment200_response import (
+    ListParametersSediment200Response,
+)
+from deutschland.mudab.model.list_parameters_wasser200_response import (
+    ListParametersWasser200Response,
+)
+from deutschland.mudab.model.list_plc_stations200_response import (
+    ListPlcStations200Response,
+)
+from deutschland.mudab.model.list_projekt_stationen200_response import (
+    ListProjektStationen200Response,
+)
 from deutschland.mudab.model.messstation import Messstation
+from deutschland.mudab.model.messwert_plc import MesswertPLC
 from deutschland.mudab.model.orderby import Orderby
 from deutschland.mudab.model.parameter import Parameter
+from deutschland.mudab.model.parameter_plc import ParameterPLC
 from deutschland.mudab.model.parameter_value import ParameterValue
 from deutschland.mudab.model.project_station import ProjectStation
 from deutschland.mudab.model.range import Range
