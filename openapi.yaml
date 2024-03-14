@@ -254,12 +254,12 @@ paths:
                 type: object
                 properties:
                     V_GEMESSENE_PARA_PLC:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/ParameterPLC'
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/ParameterPLC'
 
   /V_MESSWERTE_PLC:
-      post:
+    post:
       operationId: list-messwerte-plc
       summary: Liste aller Messwerte der gefilterten PLC Stationen
       description: |
@@ -279,9 +279,9 @@ paths:
                 type: object
                 properties:
                     V_MESSWERTE_PLC:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/MesswertPLC'
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/MesswertPLC'
 
 components:
   schemas:
@@ -536,3 +536,4 @@ components:
         - CW
         - CS
         - CF
+

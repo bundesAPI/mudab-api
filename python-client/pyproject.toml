@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "de-mudab"
-version = "0.1.0"
+version = "0.2.0"
 description = "Umweltbundesamt: Meeresumweltdatenbank (MUDAB)"
 keywords = ["OpenAPI", "OpenAPI-Generator", "mudab", "App", "API"]
 homepage = "https://github.com/bundesAPI/mudab-api"
