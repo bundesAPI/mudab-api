@@ -1,6 +1,6 @@
 # mudab.DefaultApi
 
-All URIs are relative to *https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements*
+All URIs are relative to *https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -34,10 +34,10 @@ from deutschland.mudab.api import default_api
 from deutschland.mudab.model.filter_request import FilterRequest
 from deutschland.mudab.model.list_mess_stationen200_response import ListMessStationen200Response
 from pprint import pprint
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 
@@ -124,10 +124,10 @@ from deutschland.mudab.api import default_api
 from deutschland.mudab.model.list_messwerte_plc200_response import ListMesswertePlc200Response
 from deutschland.mudab.model.filter_request import FilterRequest
 from pprint import pprint
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 
@@ -214,10 +214,10 @@ from deutschland.mudab.api import default_api
 from deutschland.mudab.model.list_parameter200_response import ListParameter200Response
 from deutschland.mudab.model.filter_request import FilterRequest
 from pprint import pprint
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 
@@ -304,10 +304,10 @@ from deutschland.mudab.api import default_api
 from deutschland.mudab.model.list_parameter_values200_response import ListParameterValues200Response
 from deutschland.mudab.model.filter_request import FilterRequest
 from pprint import pprint
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 
@@ -394,10 +394,10 @@ from deutschland.mudab.api import default_api
 from deutschland.mudab.model.list_parameters_biologie200_response import ListParametersBiologie200Response
 from deutschland.mudab.model.filter_request import FilterRequest
 from pprint import pprint
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 
@@ -484,10 +484,10 @@ from deutschland.mudab.api import default_api
 from deutschland.mudab.model.list_parameters_biota200_response import ListParametersBiota200Response
 from deutschland.mudab.model.filter_request import FilterRequest
 from pprint import pprint
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 
@@ -574,10 +574,10 @@ from deutschland.mudab.api import default_api
 from deutschland.mudab.model.filter_request import FilterRequest
 from deutschland.mudab.model.list_parameters_plc200_response import ListParametersPlc200Response
 from pprint import pprint
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 
@@ -664,10 +664,10 @@ from deutschland.mudab.api import default_api
 from deutschland.mudab.model.filter_request import FilterRequest
 from deutschland.mudab.model.list_parameters_sediment200_response import ListParametersSediment200Response
 from pprint import pprint
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 
@@ -754,10 +754,10 @@ from deutschland.mudab.api import default_api
 from deutschland.mudab.model.list_parameters_wasser200_response import ListParametersWasser200Response
 from deutschland.mudab.model.filter_request import FilterRequest
 from pprint import pprint
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 
@@ -844,10 +844,10 @@ from deutschland.mudab.api import default_api
 from deutschland.mudab.model.list_plc_stations200_response import ListPlcStations200Response
 from deutschland.mudab.model.filter_request import FilterRequest
 from pprint import pprint
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 
@@ -934,10 +934,10 @@ from deutschland.mudab.api import default_api
 from deutschland.mudab.model.list_projekt_stationen200_response import ListProjektStationen200Response
 from deutschland.mudab.model.filter_request import FilterRequest
 from pprint import pprint
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 

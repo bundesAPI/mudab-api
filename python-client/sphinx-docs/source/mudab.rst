@@ -20,45 +20,45 @@ mudab.api\_client module
 
 .. automodule:: mudab.api_client
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 mudab.configuration module
 --------------------------
 
 .. automodule:: mudab.configuration
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 mudab.exceptions module
 -----------------------
 
 .. automodule:: mudab.exceptions
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 mudab.model\_utils module
 -------------------------
 
 .. automodule:: mudab.model_utils
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 mudab.rest module
 -----------------
 
 .. automodule:: mudab.rest
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: mudab
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

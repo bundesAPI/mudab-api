@@ -63,10 +63,10 @@ from deutschland.mudab.model.list_parameters_sediment200_response import ListPar
 from deutschland.mudab.model.list_parameters_wasser200_response import ListParametersWasser200Response
 from deutschland.mudab.model.list_plc_stations200_response import ListPlcStations200Response
 from deutschland.mudab.model.list_projekt_stationen200_response import ListProjektStationen200Response
-# Defining the host is optional and defaults to https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements
+# Defining the host is optional and defaults to https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements
 # See configuration.py for a list of all supported configuration parameters.
 configuration = mudab.Configuration(
-    host = "https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements"
+    host = "https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements"
 )
 
 
@@ -108,7 +108,7 @@ with mudab.ApiClient(configuration) as api_client:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements*
+All URIs are relative to *https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
