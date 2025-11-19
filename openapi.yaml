@@ -5,7 +5,7 @@ info:
     Meeres-Monitoringdaten von Küstenbundesländern und Forschungseinrichtungen
   version: 1.0.0
 servers:
-  - url: 'https://geoportal.bafg.de/MUDABAnwendung/rest/BaseController/FilterElements'
+  - url: 'https://geoportal.bafg.de/mudab/rest/BaseController/FilterElements'
 paths:
 
   /PROJECTSTATION_SMALL:
